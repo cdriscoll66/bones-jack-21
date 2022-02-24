@@ -1,0 +1,79 @@
+$color-palette: (
+    'transparent': transparent,
+    'white': #ffffff,
+) !default;
+
+$gradient-presets: () !default;
+
+.has-background {
+
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: currentColor;
+    }
+}
+
+@each $key, $value in $color-palette {
+
+    .has-#{$key}-background-color[class] {
+        background-color: var(--global--color-#{$key});
+
+        // Localize CSS-variables to limit relationship scope
+        // & > [class*="__inner-container"] {
+        //     --local--color-background: var(--global--color-#{$key}, #{$value});
+        //     background-color: var(--local--color-background);
+        // }
+    }
+
+    .has-#{$key}-color[class] {
+        color: var(--global--color-#{$value});
+
+        // Localize CSS-variables to limit relationship scope
+        // & > [class*="__inner-container"] {
+        //     --local--color-primary: var(--global--color-#{$key}, #{$value});
+        //     color: var(--local--color-primary);
+        // }
+    }
+}
+
+.has-background:not(.has-text-color) {
+
+    @each $key, $value in $color-palette-preset-color {
+
+        &.has-#{key}-background-color[class] {
+
+            @if ($value == 'inverted') {
+                color: var(--global--color-white, #ffffff);
+            }
+            @else {
+                color: var(--global--color-dark-gray, #000000);
+            }
+
+            // Localize CSS-variables to limit relationship scope
+            // & > [class*="__inner-container"] {
+            //
+            //     @if ($value == 'inverted') {
+            //         --local--color-primary: var(--global--color-background, #ffffff);
+            //         color: var(--local--color-primary, var(--global--color-primary));
+            //     }
+            //     @else {
+            //         --local--color-primary: var(--global--color-primary, #000000);
+            //         color: var(--local--color-primary, var(--global--color-primary));
+            //     }
+            // }
+        }
+    }
+}
+
+@each $key, $value in $gradient-presets {
+
+  .has-#{$key}-gradient-background {
+    background: $value;
+  }
+}

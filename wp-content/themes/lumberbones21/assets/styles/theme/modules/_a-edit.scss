@@ -1,0 +1,64 @@
+article {
+  position: relative;
+}
+
+.a-edit {
+  margin: 0;
+}
+
+.a-edit__link {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  padding: 2px 8px 4px;
+  border-radius: 3px;
+  background-color: red;
+  color: white !important;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.2s;
+    pointer-events: all;
+  }
+
+  &:focus {
+    position: absolute;
+  }
+
+  article:hover > .a-edit & {
+    opacity: 1;
+    transition: opacity 0.2s;
+    pointer-events: all;
+  }
+}
+
+.a-edit__outline {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: 2px dotted red;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+
+  .a-edit__link:hover + & {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+}

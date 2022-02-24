@@ -1,0 +1,164 @@
+:root {
+    /** Twenty Twenty-One Colors */
+	// --global--color-black: #000;
+	// --global--color-dark-gray: #28303d;
+	// --global--color-gray: #39414d;
+	// --global--color-light-gray: #f0f0f0;
+	// --global--color-green: #d1e4dd;
+	// --global--color-blue: #d1dfe4;
+	// --global--color-purple: #d1d1e4;
+	// --global--color-red: #e4d1d1;
+	// --global--color-orange: #e4dad1;
+	// --global--color-yellow: #eeeadd;
+	// --global--color-white: #fff;
+	// --global--color-white-50: rgba(255, 255, 255, 0.5); // Used for disabled buttons
+	// --global--color-white-90: rgba(255, 255, 255, 0.9); // Used in form fields.
+
+    /** Baseline Colors, retain for compatibility with testing content */
+    --global--color-transparent: transparent;
+    --global--color-baseline-gray-1: #f2f5f7;
+    --global--color-baseline-gray-2: #d8d8d8;
+    --global--color-baseline-gray-3: #c2d1d9;
+    --global--color-baseline-gray-4: #a1aeb7;
+    --global--color-baseline-gray-5: #505d68;
+    --global--color-baseline-gray-6: #424b5a;
+    --global--color-baseline-gray-7: #1f2432;
+
+    /** Primary Colors, Demo FEED Colors */
+    --global--color-blue-hopeful: #002d5d;
+    --global--color-green-healthy: #b2be35;
+
+    /** Secondary Colors, Demo FEED Colors */
+    --global--color-green-impact: #7a853b;
+    --global--color-green-optimism: #d5d755;
+    --global--color-blue-empathy: #b1e3e3;
+    --global--color-blue-energy: #5ab7b2;
+    --global--color-blue-compassion: #42738d;
+    --global--color-orange-passion: #e75300;
+    --global--color-gray-stability: #cac8c8;
+    --global--color-gray-trust: #e0dcd4;
+
+    /** Support Colors, Demo FEED Colors */
+    --global--color-black-bean: #404042;
+    --global--color-gray-chia-seed: #58585b;
+    --global--color-gray-squid: #808184;
+
+    /** Functional Colors */
+    // --global--color-border: null;
+    --global--color-image: null;
+    --global--color-text: var(--global--color-green-impact);
+    --global--color-heading: null;
+
+    /** Form Colors */
+    --global--color-form-border: var(--global--color-border);
+    --global--color-form-background: var(--global--color-white);
+    --global--color-form-error: darken(red, 8%);
+}
+
+/**
+ * @requires /config/editor-color-palette.php to generate Block Editor UI
+ * @requires /assets/styles/theme/twentytwentyone/assets/sass/07-utilities/color-palette.colab.scss
+ *
+ * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes
+ */
+$color-palette: (
+    /** Twenty Twenty-One Colors */
+    'dark-gray': var(--global-color-dark-gray),
+    'gray': var(--global-color-gray),
+    'light-gray': var(--global-color-light-gray),
+    'green': var(--global-color-green),
+    'blue': var(--global-color-blue),
+    'purple': var(--global-color-purple),
+    'red': var(--global-color-red),
+    'orange': var(--global-color-orange),
+    'yellow': var(--global-color-yellow),
+
+    /** Baseline Colors, retain for compatibility with testing content */
+    'transparent': var(--global-color-transparent),
+    'white': var(--global-color-white),
+    'black': var(--global-color-black),
+    'baseline-gray-1': var(--global-color-baseline-gray-1),
+    'baseline-gray-2': var(--global-color-baseline-gray-2),
+    'baseline-gray-3': var(--global-color-baseline-gray-3),
+    'baseline-gray-4': var(--global-color-baseline-gray-4),
+    'baseline-gray-5': var(--global-color-baseline-gray-5),
+    'baseline-gray-6': var(--global-color-baseline-gray-6),
+    'baseline-gray-7': var(--global-color-baseline-gray-7),
+
+    /** Demo FEED Colors */
+    'black-bean': var(--global-color-black-bean),
+    'blue-compassion': var(--global-color-blue-compassion),
+    'blue-empathy': var(--global-color-blue-empathy),
+    'blue-energy': var(--global-color-blue-energy),
+    'blue-hopeful': var(--global-color-blue-hopeful),
+    'gray-chia-seed': var(--global-color-gray-chia-seed),
+    'gray-squid': var(--global-color-gray-squid),
+    'gray-stability': var(--global-color-gray-stability),
+    'gray-trust': var(--global-color-gray-trust),
+    'green-healthy': var(--global-color-green-healthy),
+    'green-impact': var(--global-color-green-impact),
+    'green-optimism': var(--global-color-green-optimism),
+    'orange-passion': var(--global-color-orange-passion),
+);
+
+$color-palette-preset-color: (
+    /** Twenty Twenty-One Colors */
+    'dark-gray': 'inverted',
+    'gray': 'inverted',
+    'light-gray': 'primary',
+    'green': 'primary',
+    'blue': 'primary',
+    'purple': 'primary',
+    'red': 'primary',
+    'orange': 'primary',
+    'yellow': 'primary',
+
+    /** Baseline Colors */
+    'black': 'inverted',
+    'white': 'primary',
+    'transparent': 'primary',
+
+    /** Demo FEED Colors */
+    'black-bean': 'inverted',
+    'blue-compassion': 'primary',
+    'blue-empathy': 'primary',
+    'blue-energy': 'primary',
+    'blue-hopeful': 'inverted',
+    'gray-chia-seed': 'inverted',
+    'gray-squid': 'primary',
+    'gray-stability': 'primary',
+    'gray-trust': 'primary',
+    'green-healthy': 'primary',
+    'green-impact': 'inverted',
+    'green-optimism': 'primary',
+    'orange-passion': 'primary',
+);
+
+/** Gradients */
+// $gradient-transparent-to-black-40: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+// $gradient-purple-to-yellow: linear-gradient(160deg, var(--global--color-purple), var(--global--color-yellow));
+// $gradient-yellow-to-purple: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-purple));
+// $gradient-green-to-yellow: linear-gradient(160deg, var(--global--color-green), var(--global--color-yellow));
+// $gradient-yellow-to-green: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-green));
+// $gradient-red-to-yellow: linear-gradient(160deg, var(--global--color-red), var(--global--color-yellow));
+// $gradient-yellow-to-red: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-red));
+// $gradient-purple-to-red: linear-gradient(160deg, var(--global--color-purple), var(--global--color-red));
+// $gradient-red-to-purple: linear-gradient(160deg, var(--global--color-red), var(--global--color-purple));
+
+/**
+ * @requires /config/editor-gradient-presets.php
+ * @requires /assets/styles/theme/twentytwentyone/assets/sass/07-utilities/color-palette.colab.scss
+ *
+ * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-gradient-presets
+ */
+// $gradient-presets: (
+//     'transparent-to-black-40': $gradient-transparent-to-black-40,
+//     'purple-to-yellow': $gradient-purple-to-yellow,
+//     'yellow-to-purple': $gradient-yellow-to-purple,
+//     'green-to-yellow': $gradient-green-to-yellow,
+//     'yellow-to-green': $gradient-yellow-to-green,
+//     'red-to-yellow': $gradient-red-to-yellow,
+//     'yellow-to-red': $gradient-yellow-to-red,
+//     'purple-to-red': $gradient-purple-to-red,
+//     'red-to-purple': $gradient-red-to-purple,
+// );

@@ -2,6 +2,9 @@
 
 use App\Http\Lumberjack;
 
+// Call vendor autoload from composer
+require_once('vendor/autoload.php');
+
 // Create the Application Container
 $app = require_once('bootstrap/app.php');
 

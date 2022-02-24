@@ -29,6 +29,10 @@ return [
 
         // Application Providers
         App\Providers\AppServiceProvider::class,
+        App\Providers\AssetsServiceProvider::class, // Enqueue scripts and styles
+        App\Providers\BlocksServiceProvider::class, // Add custom blocks
+        App\Providers\TaxonomiesServiceProvider::class, // Add custom taxonomies
+        App\Providers\TwigServiceProvider::class, // Add twig support
     ],
 
     'aliases' => [
@@ -52,6 +56,8 @@ return [
 
     'themeSupport' => [
         'post-thumbnails',
+        'responsive-embeds',
+        'align-wide'
     ],
 
     /**

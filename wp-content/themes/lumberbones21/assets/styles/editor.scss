@@ -3,17 +3,30 @@
 /** Functions */
 
 /** Mixins */
+@import 'mixins/hide';
 
 /** Config */
 @import 'config/colors';
 @import 'config/variables';
 
 /** Import Twenty Twenty-One styles */
-@import 'theme/twentytwentyone/assets/sass/style.colab';
+@import 'theme/twentytwentyone/assets/sass/style-editor.colab';
+
+/** Components */
+
+
+
+
+:root {
+
+  /* Colors */
+  --global--color-background: #ffffff;
+}
 
 /** Theme Base */
 
 /** Theme Constructs */
+
 
 /** Theme Atoms */
 
@@ -21,8 +34,15 @@
 
 /** Theme Organisms */
 
+
+@import 'theme/utility_classes';
+
+
 /** WordPress Blocks */
+
+
+/** Plugin Blocks */
+
 
 /** Custom Blocks */
 
-/** Theme */

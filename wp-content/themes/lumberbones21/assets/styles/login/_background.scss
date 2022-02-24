@@ -1,0 +1,24 @@
+body.login {
+
+    /** Example - Background Color */
+    // background-color: var(--global--color-black);
+
+    /** Example - Background Image */
+    // background: no-repeat 50% 50% url('../images/login/login.jpg');
+    // background-size: cover;
+
+    /** Example - Background Texture */
+    // background: repeat 50% 50% var(--global--color-white) url('../images/login/texture.svg');
+    // background-size: 6px 6px;
+    background-color:  rgba(200, 32, 43, 0.1) !important;
+
+    /** Example - Overlay Color */
+    // position: relative;
+    //
+    // &::before {
+    //   @extend %cover;
+    //   content: '';
+    //   background-color: $color-placeholder;
+    //   opacity: 0.15;
+    // }
+  }

@@ -1,0 +1,33 @@
+body.login {
+
+    #nav,
+    #backtoblog {
+      text-align: center;
+
+      a {
+        text-decoration: underline;
+        color: var(--global--color-primary);
+
+        &:hover {
+          color: var(--global--color-secondary);
+        }
+
+        &:focus {
+          // box-shadow: none;
+          color: var(--global--color-secondary);
+        }
+      }
+    }
+
+    #nav {}
+
+    #backtoblog {
+      margin-bottom: 0;
+    }
+
+    .privacy-policy-page-link {
+      margin-bottom: 0;
+    }
+
+    .privacy-policy-link {}
+  }

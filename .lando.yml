@@ -1,0 +1,6 @@
+name: bonesjack21
+recipe: pantheon
+config:
+  framework: wordpress
+  site: bonesjack21
+  id: 5d7f080e-fe81-4650-bd97-ca4864ada146

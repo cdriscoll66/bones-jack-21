@@ -4,3 +4,50 @@ config:
   framework: wordpress
   site: bonesjack21
   id: 5d7f080e-fe81-4650-bd97-ca4864ada146
+colab:
+  lando: 3.0.26
+  recipe: pantheon
+  framework: wordpress
+  version: 1.0.8
+proxy:
+  node:
+    - sync-bonesjack21.lndo.site:3000
+services:
+  node:
+    type: node:custom
+    ssl: true
+    overrides:
+      ports:
+        - '3000'
+      image: colab/buildtools:node-12
+tooling:
+  composer:
+    service: appserver
+    description: '-- Runs composer commands'
+    cmd: composer
+  npm:
+    service: node
+    description: '-- Runs npm commands'
+    cmd: npm
+  npx:
+    service: node
+    description: '-- Runs npx commands'
+    cmd: npx
+  prod:
+    service: node
+    description: '-- Runs production build of assets'
+    cmd: cd $LANDO_MOUNT/wp-content/themes/lumberbones21/ && npm install && npm run production
+  watch:
+    service: node
+    description: '-- Runs development build of assets and watches file changes'
+    cmd: cd $LANDO_MOUNT/wp-content/themes/lumberbones21/ && npm install && npm run watch
+  xdebug-on:
+    service: appserver
+    description: '-- Enable Xdebug for NGINX'
+    cmd: docker-php-ext-enable xdebug && pkill -o -USR2 php-fpm
+    user: root
+  xdebug-off:
+    service: appserver
+    description: '-- Disable Xdebug for NGINX'
+    cmd: rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && pkill -o -USR2 php-fpm
+    user: root
